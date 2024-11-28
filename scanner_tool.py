@@ -1,10 +1,10 @@
 import socket
 import requests
 
-# Port scan function with port range
-def port_scan(target, start_port, end_port):
+# Port scan function
+def port_scan(target):
     open_ports = []
-    for port in range(start_port, end_port + 1):
+    for port in [80, 443, 8080]:
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.settimeout(1)
         result = sock.connect_ex((target, port))

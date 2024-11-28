@@ -3,28 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Network Scanner Tool</title>
+    <title>Network Scanner</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </head>
 <body>
     <div class="container">
-        <h1>Network Scanner Tool</h1>
+        <h1>Network Scanner</h1>
         <form action="/scan" method="POST">
             <label for="scan_type">Select Scan Type:</label>
-            <select name="scan_type" id="scan_type" required>
+            <select name="scan_type" id="scan_type">
                 <option value="port_scan">Port Scan</option>
                 <option value="vulnerability_scan">Vulnerability Scan</option>
-            </select>
+            </select><br><br>
 
-            <label for="target">Enter Target IP or URL:</label>
-            <input type="text" name="target" id="target" required>
-
-            <!-- Port Range (Visible only for Port Scan) -->
-            <div id="port_range_div" style="display: none;">
-                <label for="port_range">Enter Port Range (e.g., 80-100):</label>
-                <input type="text" name="port_range" id="port_range">
-            </div>
+            <label for="target">Target IP/URL:</label>
+            <input type="text" id="target" name="target" required><br><br>
 
             <input type="submit" value="Start Scan">
         </form>

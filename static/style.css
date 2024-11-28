@@ -1,52 +1,38 @@
-/* General reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Basic styling for the scanner application */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-    background-color: white;
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
     padding: 20px;
+    background-color: white;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     text-align: center;
-    margin-bottom: 20px;
-    font-size: 24px;
     color: #333;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
 }
 
 label {
+    font-size: 16px;
     margin-bottom: 8px;
-    font-size: 14px;
-    color: #333;
+    display: block;
 }
 
 input, select {
+    width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
+    margin: 8px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 14px;
 }
 
 input[type="submit"] {
@@ -54,31 +40,19 @@ input[type="submit"] {
     color: white;
     border: none;
     cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 12px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
 }
 
 input[type="submit"]:hover {
     background-color: #45a049;
 }
 
-#port_range_div {
-    margin-top: 10px;
+a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007BFF;
+    text-decoration: none;
 }
 
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-}
-
-select {
-    font-size: 14px;
-}
-
-/* Add some spacing between form elements */
-form > label, form > input {
-    margin-bottom: 15px;
+a:hover {
+    text-decoration: underline;
 }

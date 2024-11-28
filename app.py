@@ -13,12 +13,7 @@ def scan():
     target = request.form.get('target')
 
     if scan_type == 'port_scan':
-        port_range = request.form.get('port_range')
-        if port_range:
-            start_port, end_port = map(int, port_range.split('-'))
-            result = port_scan(target, start_port, end_port)
-        else:
-            result = "Port range is required for port scan."
+        result = port_scan(target)
     elif scan_type == 'vulnerability_scan':
         result = vulnerability_scan(target)
     else:
